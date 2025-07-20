@@ -1,12 +1,9 @@
-def call(String name = "Dalton") {
-    pipeline {
-        agent any
-        stages {
-            stage('Hello') {
-                steps {
-                    echo "Hello from testPipeline, ${name}!"
-                }
-            }
-        }
+def call() {
+  pipeline {
+    agent any
+
+    stages {
+      loopStage()
     }
+  }
 }
